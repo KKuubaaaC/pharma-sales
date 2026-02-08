@@ -1,0 +1,19 @@
+# Pharma Sales ETL Pipeline - default configuration
+# Override with env vars or --config for custom paths
+
+paths:
+  raw: "data/raw"
+  sample: "data/sample"
+  output: "output"
+
+# Input file name (within raw/)
+input_file: "salesdaily.csv"
+# Sample file name (within sample/) for tests and --mode sample
+sample_file: "salesdaily_sample.csv"
+
+# Spark settings (optional)
+spark:
+  shuffle_partitions: 4
+
+# Run mode: sample (data/sample) or full (data/raw)
+default_mode: "sample"
